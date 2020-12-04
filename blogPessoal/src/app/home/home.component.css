@@ -1,0 +1,10 @@
+.parallax {
+    background-image: url('https://28j4hc23gg8m166m6828ik29-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/AdobeStock_189224831.jpeg');
+
+    min-height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
