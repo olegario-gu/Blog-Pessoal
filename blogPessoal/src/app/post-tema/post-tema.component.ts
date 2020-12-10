@@ -38,7 +38,7 @@ export class PostTemaComponent implements OnInit {
     if (this.tema.descricao == null) {
       alert('Preencha o campo de nome do tema corretamente!')
     } else {
-      this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
+      this.temaService.postTema(this.tema).subscribe((resp:any = Tema) => {
         this.tema = resp
         this.router.navigate(['/feed'])
         alert('tema cadastrado com sucesso!')

@@ -1,3 +1,7 @@
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
@@ -12,7 +16,11 @@ const routes: Routes = [
   { path: 'feed', component: FeedComponent },
   { path:'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'cadastro-tema', component: PostTemaComponent}
+  { path: 'cadastro-tema', component: PostTemaComponent },
+  { path: 'editar-post/:id', component: PutPostagemComponent },
+  { path: 'delete-post/id', component: DeletePostagemComponent },
+  { path: 'editar-tema/:id', component: PutTemaComponent},
+  { path: 'delete-tema/:id', component: DeleteTemaComponent}
 ];
 
 @NgModule({
