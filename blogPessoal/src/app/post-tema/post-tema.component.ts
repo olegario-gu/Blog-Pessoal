@@ -29,7 +29,7 @@ export class PostTemaComponent implements OnInit {
   }
 
   findByIdTema() {
-    this.temaService.getByIdTema(this.tema.id).subscribe((resp: Tema | any) => {
+    this.temaService.getByIdTema(this.tema.id).subscribe((resp: Tema) => {
       this.tema = resp
     })
   }
@@ -38,7 +38,7 @@ export class PostTemaComponent implements OnInit {
     if (this.tema.descricao == null) {
       alert('Preencha o campo de nome do tema corretamente!')
     } else {
-      this.temaService.postTema(this.tema).subscribe((resp:any = Tema) => {
+      this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp
         this.router.navigate(['/feed'])
         alert('tema cadastrado com sucesso!')

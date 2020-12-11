@@ -26,7 +26,7 @@ export class DeletePostagemComponent implements OnInit {
   }
 
   findByIdPostagem(id:number) {
-    this.postagemService.getByIdPostagem(id).subscribe((resp:any = Postagem) => {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem=resp
     })
   }

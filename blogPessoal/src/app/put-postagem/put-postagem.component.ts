@@ -37,7 +37,7 @@ export class PutPostagemComponent implements OnInit {
   }
 
   findByIdPostagem(id: number) {
-    this.postagemService.getByIdPostagem(id).subscribe((resp:any = Postagem) => {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
     })
   }
@@ -46,7 +46,7 @@ export class PutPostagemComponent implements OnInit {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
-    this.postagemService.putPostagem(this.postagem).subscribe((resp:any = Postagem) => {
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       this.router.navigate(['/feed'])
       alert('Postagem alterada com sucesso')
@@ -64,7 +64,7 @@ export class PutPostagemComponent implements OnInit {
   }
 
  findByIdTema() {
-   this.temaService.getByIdTema(this.idTema).subscribe((resp:any = Tema) => {
+   this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
      this.tema = resp;
    })
  }
